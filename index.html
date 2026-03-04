@@ -274,7 +274,6 @@
     <div class="status-item"><div class="status-dot dot-new"></div> New posting</div>
     <div class="status-item"><div class="status-dot dot-ok"></div> Active posting</div>
     <div class="status-item"><div class="status-dot dot-none"></div> No posting</div>
-    <div class="status-item"><div class="status-dot dot-pending"></div> Link pending</div>
     <div class="last-refresh">Last refreshed: <span id="last-refresh-time">—</span></div>
   </div>
 
@@ -384,32 +383,19 @@
   // ─── PIPELINES ────────────────────────────────────────────────────────────
   // url: null = link not yet provided (shows as "pending")
   const PIPELINES = [
-    { id: 'sabine',    name: 'Sabine Hub',    url: null },
     { id: 'tgp',       name: 'TGP',           url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=TGP' },
-    { id: 'tgp-z0',    name: 'TGP Z0',        url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=TGP' },
-    { id: 'tgp-100l',  name: 'TGP 100L',      url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=TGP' },
-    { id: 'tgp-800l',  name: 'TGP 800L',      url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=TGP' },
-    { id: 'tgp-500l',  name: 'TGP 500L',      url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=TGP' },
     { id: 'sonat',     name: 'Sonat',         url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=SNG' },
     { id: 'txgas',     name: 'Texas Gas',     url: 'https://www.gasquest.com/notices/critical' },
     { id: 'colgulf',   name: 'Columbia Gulf', url: 'https://ebb.tceconnects.com/infopost/' },
-    { id: 'tiger',     name: 'Tiger',         url: null },
     { id: 'ngpl',      name: 'NGPL',          url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=NGPL' },
     { id: 'rex',       name: 'REX',           url: 'https://pipeline.tallgrassenergylp.com/Pages/Notices.aspx?pipeline=501&type=CRIT' },
     { id: 'rover',     name: 'Rover',         url: 'https://rovermessenger.energytransfer.com/ipost/notice/critical?asset=ROVER' },
     { id: 'tetco',     name: 'TETCO',         url: 'https://infopost.enbridge.com/infopost/TEHome.asp?Pipe=TE' },
-    { id: 'stx',       name: 'STX',           url: null },
-    { id: 'wla',       name: 'WLA/ELA',       url: null },
     { id: 'anr',       name: 'ANR',           url: 'https://ebb.tceconnects.com/infopost/' },
-    { id: 'ml2se',     name: 'ML2-SE',        url: null },
-    { id: 'anr-se',    name: 'SE (ANR)',       url: null },
     { id: 'egt',       name: 'EGT',           url: 'https://pipelines.energytransfer.com/ipost/notice/enbl-critical?asset=EGT' },
     { id: 'transco',   name: 'Transco',       url: 'https://www.1line.williams.com/Transco/index.html' },
-    { id: 'bridge',    name: 'Bridgeline',    url: null },
     { id: 'mep',       name: 'MEP',           url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=MEP' },
     { id: 'fgt',       name: 'FGT',           url: 'https://pipelines.energytransfer.com/ipost/notice/critical?asset=FGT' },
-    { id: 'regency',   name: 'Regency',       url: null },
-    { id: 'gulfrun',   name: 'Gulf Run',      url: null },
     { id: 'gulfsouth', name: 'Gulf South',    url: 'https://www.gasquest.com/notices/critical' },
   ];
 
