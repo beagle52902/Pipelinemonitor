@@ -20,82 +20,37 @@
       --new: #0a4a7a;
       --new-light: #e6f0fa;
       --danger: #8a1a1a;
+      --pending: #5a4a00;
+      --pending-light: #fdf8e1;
       --mono: 'IBM Plex Mono', monospace;
       --sans: 'IBM Plex Sans', sans-serif;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: var(--sans); background: var(--bg); color: var(--text); min-height: 100vh; }
 
     /* ── LOGIN ── */
     #login-screen {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--text);
-      padding: 24px;
+      min-height: 100vh; display: flex; align-items: center;
+      justify-content: center; background: var(--text); padding: 24px;
     }
-
     .login-box {
-      background: var(--bg);
-      border-radius: 8px;
-      padding: 48px 40px;
-      width: 100%;
-      max-width: 380px;
-      text-align: center;
+      background: var(--bg); border-radius: 8px; padding: 48px 40px;
+      width: 100%; max-width: 380px; text-align: center;
     }
-
-    .login-logo {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    .login-title {
-      font-family: var(--mono);
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 32px;
-    }
-
+    .login-logo { font-family: var(--mono); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .login-title { font-family: var(--mono); font-size: 22px; font-weight: 600; margin-bottom: 32px; }
     .login-field {
-      width: 100%;
-      font-family: var(--mono);
-      font-size: 14px;
-      border: 1px solid var(--border);
-      background: white;
-      padding: 12px 16px;
-      border-radius: 5px;
-      color: var(--text);
-      outline: none;
-      margin-bottom: 12px;
-      letter-spacing: 1px;
-      text-align: center;
+      width: 100%; font-family: var(--mono); font-size: 14px;
+      border: 1px solid var(--border); background: white; padding: 12px 16px;
+      border-radius: 5px; color: var(--text); outline: none; margin-bottom: 12px;
+      letter-spacing: 1px; text-align: center;
     }
-
     .login-field:focus { border-color: var(--text); }
-
     .login-btn {
-      width: 100%;
-      font-family: var(--mono);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      background: var(--text);
-      color: var(--bg);
-      border: none;
-      padding: 14px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: opacity 0.15s;
-      margin-top: 4px;
+      width: 100%; font-family: var(--mono); font-size: 12px; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase; background: var(--text);
+      color: var(--bg); border: none; padding: 14px; border-radius: 5px; cursor: pointer;
     }
-
     .login-btn:hover { opacity: 0.85; }
     .login-error { font-family: var(--mono); font-size: 11px; color: var(--danger); margin-top: 12px; min-height: 16px; }
     .login-hint { font-size: 11px; color: var(--muted); margin-top: 24px; line-height: 1.6; }
@@ -104,37 +59,23 @@
     #dashboard { display: none; }
 
     header {
-      background: var(--text);
-      color: #f5f3ee;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 56px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      background: var(--text); color: #f5f3ee; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px; position: sticky; top: 0; z-index: 100;
     }
-
     .header-left { display: flex; align-items: center; gap: 16px; }
     .site-title { font-family: var(--mono); font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
     .header-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.2); }
     .header-sub { font-size: 11px; color: rgba(255,255,255,0.45); font-family: var(--mono); }
     .header-right { display: flex; align-items: center; gap: 16px; }
     .refresh-info { font-family: var(--mono); font-size: 10px; color: rgba(255,255,255,0.4); }
-
     .refresh-btn {
-      font-family: var(--mono); font-size: 11px;
-      background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.8);
-      border: 1px solid rgba(255,255,255,0.15); padding: 6px 14px;
-      border-radius: 4px; cursor: pointer; transition: all 0.15s;
+      font-family: var(--mono); font-size: 11px; background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 14px; border-radius: 4px; cursor: pointer; transition: all 0.15s;
     }
     .refresh-btn:hover { background: rgba(255,255,255,0.15); }
-
-    .logout-btn {
-      font-family: var(--mono); font-size: 11px; background: none;
-      color: rgba(255,255,255,0.4); border: none; cursor: pointer; transition: color 0.15s;
-    }
+    .logout-btn { font-family: var(--mono); font-size: 11px; background: none; color: rgba(255,255,255,0.4); border: none; cursor: pointer; transition: color 0.15s; }
     .logout-btn:hover { color: rgba(255,255,255,0.8); }
 
     .status-bar {
@@ -147,6 +88,7 @@
     .dot-new { background: var(--new); }
     .dot-ok  { background: var(--accent); }
     .dot-none { background: var(--border-strong); }
+    .dot-pending { background: #c8a800; }
     .last-refresh { margin-left: auto; }
 
     .alert-bar {
@@ -159,20 +101,22 @@
       background: white; padding: 6px 10px; border-radius: 4px; color: var(--text); outline: none; width: 220px;
     }
     .alert-bar input:focus { border-color: var(--new); }
-    .alert-save-btn {
-      font-family: var(--mono); font-size: 11px; background: var(--new); color: white;
-      border: none; padding: 7px 14px; border-radius: 4px; cursor: pointer;
-    }
+    .alert-save-btn { font-family: var(--mono); font-size: 11px; background: var(--new); color: white; border: none; padding: 7px 14px; border-radius: 4px; cursor: pointer; }
     .alert-save-btn:hover { opacity: 0.85; }
 
     .main { padding: 24px; max-width: 1400px; margin: 0 auto; }
 
-    .section-heading {
-      font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+    /* ── FILTER BAR ── */
+    .filter-section { margin-bottom: 20px; }
+
+    .filter-row {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap;
     }
 
-    .filter-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .filter-label {
+      font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--muted); white-space: nowrap;
+    }
 
     .filter-btn {
       font-family: var(--mono); font-size: 11px; padding: 6px 14px; border-radius: 4px;
@@ -182,12 +126,39 @@
     .filter-btn.active { background: var(--text); color: var(--bg); border-color: var(--text); }
     .filter-btn:hover:not(.active) { border-color: var(--border-strong); color: var(--text); }
 
+    /* ── PIPELINE SELECTOR ── */
+    .pipeline-selector-row {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    }
+
+    .pipeline-pill {
+      font-family: var(--mono); font-size: 10px; padding: 5px 11px; border-radius: 20px;
+      border: 1px solid var(--border); background: var(--surface); color: var(--muted);
+      cursor: pointer; letter-spacing: 0.5px; transition: all 0.15s; white-space: nowrap;
+    }
+    .pipeline-pill.active {
+      background: var(--new); color: white; border-color: var(--new);
+    }
+    .pipeline-pill:hover:not(.active) { border-color: var(--border-strong); color: var(--text); }
+
+    .clear-pill {
+      font-family: var(--mono); font-size: 10px; padding: 5px 11px; border-radius: 20px;
+      border: 1px solid var(--border); background: #f0ede8; color: var(--muted);
+      cursor: pointer; letter-spacing: 0.5px; transition: all 0.15s;
+    }
+    .clear-pill:hover { background: var(--danger); color: white; border-color: var(--danger); }
+
     .search-input {
       font-family: var(--mono); font-size: 12px; border: 1px solid var(--border);
       background: var(--surface); padding: 6px 12px; border-radius: 4px;
       color: var(--text); outline: none; width: 180px; margin-left: auto;
     }
     .search-input:focus { border-color: var(--border-strong); }
+
+    .section-heading {
+      font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+    }
 
     .pipeline-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
 
@@ -199,6 +170,7 @@
     .pipeline-card.has-new     { border-left: 3px solid var(--new); }
     .pipeline-card.has-posting { border-left: 3px solid var(--accent); }
     .pipeline-card.no-posting  { border-left: 3px solid var(--border); opacity: 0.75; }
+    .pipeline-card.is-pending  { border-left: 3px solid #c8a800; opacity: 0.75; }
 
     .card-header {
       padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;
@@ -214,6 +186,7 @@
     .badge-active  { background: var(--accent-light); color: var(--accent); border: 1px solid #b8dcc8; }
     .badge-none    { background: #f0ede8; color: var(--muted); border: 1px solid var(--border); }
     .badge-loading { background: #f0ede8; color: var(--muted); border: 1px solid var(--border); animation: blink 1.2s infinite; }
+    .badge-pending { background: var(--pending-light); color: var(--pending); border: 1px solid #e0d080; }
 
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.4} }
 
@@ -224,6 +197,7 @@
     .view-link { font-family: var(--mono); font-size: 11px; color: var(--new); text-decoration: none; }
     .view-link:hover { text-decoration: underline; }
     .no-posting-msg { font-size: 12px; color: var(--muted); font-style: italic; padding: 8px 0; }
+    .pending-msg { font-size: 12px; color: var(--pending); font-style: italic; padding: 8px 0; }
 
     /* ── CHANGE PASSWORD MODAL ── */
     .modal-overlay {
@@ -235,13 +209,12 @@
     .modal { background: var(--surface); border-radius: 8px; padding: 32px; width: 100%; max-width: 360px; }
     .modal h3 { font-family: var(--mono); font-size: 14px; margin-bottom: 20px; letter-spacing: 1px; }
     .modal input {
-      width: 100%; font-family: var(--mono); font-size: 13px;
-      border: 1px solid var(--border); padding: 10px 12px; border-radius: 4px;
-      color: var(--text); outline: none; margin-bottom: 10px;
+      width: 100%; font-family: var(--mono); font-size: 13px; border: 1px solid var(--border);
+      padding: 10px 12px; border-radius: 4px; color: var(--text); outline: none; margin-bottom: 10px;
     }
     .modal input:focus { border-color: var(--text); }
     .modal-actions { display: flex; gap: 10px; margin-top: 8px; }
-    .modal-save { flex: 1; font-family: var(--mono); font-size: 12px; background: var(--text); color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; letter-spacing: 1px; }
+    .modal-save { flex: 1; font-family: var(--mono); font-size: 12px; background: var(--text); color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; }
     .modal-cancel { flex: 1; font-family: var(--mono); font-size: 12px; background: none; color: var(--muted); border: 1px solid var(--border); padding: 10px; border-radius: 4px; cursor: pointer; }
     .modal-error { font-family: var(--mono); font-size: 11px; color: var(--danger); min-height: 14px; margin-top: 4px; }
 
@@ -301,6 +274,7 @@
     <div class="status-item"><div class="status-dot dot-new"></div> New posting</div>
     <div class="status-item"><div class="status-dot dot-ok"></div> Active posting</div>
     <div class="status-item"><div class="status-dot dot-none"></div> No posting</div>
+    <div class="status-item"><div class="status-dot dot-pending"></div> Link pending</div>
     <div class="last-refresh">Last refreshed: <span id="last-refresh-time">—</span></div>
   </div>
 
@@ -314,14 +288,27 @@
   </div>
 
   <div class="main">
-    <div class="filter-bar">
-      <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
-      <button class="filter-btn" onclick="setFilter('new',this)">New</button>
-      <button class="filter-btn" onclick="setFilter('active',this)">Active</button>
-      <button class="filter-btn" onclick="setFilter('none',this)">No Posting</button>
-      <input class="search-input" type="text" placeholder="Search pipelines..." oninput="filterSearch(this.value)"/>
+    <div class="filter-section">
+
+      <!-- Status filter -->
+      <div class="filter-row">
+        <span class="filter-label">Status:</span>
+        <button class="filter-btn active" onclick="setStatusFilter('all',this)">All</button>
+        <button class="filter-btn" onclick="setStatusFilter('new',this)">New</button>
+        <button class="filter-btn" onclick="setStatusFilter('active',this)">Active</button>
+        <button class="filter-btn" onclick="setStatusFilter('none',this)">No Posting</button>
+        <input class="search-input" type="text" placeholder="Search pipelines..." oninput="filterSearch(this.value)"/>
+      </div>
+
+      <!-- Pipeline selector -->
+      <div class="filter-row" style="align-items:flex-start;">
+        <span class="filter-label" style="margin-top:6px;">Pipeline:</span>
+        <div class="pipeline-selector-row" id="pipeline-pills"></div>
+      </div>
+
     </div>
-    <div class="section-heading">Pipeline Informational Postings — <span id="pipeline-count">27</span> Pipelines</div>
+
+    <div class="section-heading">Pipeline Informational Postings — <span id="pipeline-count">0</span> Shown</div>
     <div class="pipeline-grid" id="pipeline-grid"></div>
   </div>
 </div>
@@ -345,8 +332,6 @@
 
 <script>
   // ─── PASSWORD ─────────────────────────────────────────────────────────────
-  // Default password — change it anytime via the in-app "Change password" link.
-  // The new password is saved in localStorage and persists across sessions.
   const DEFAULT_PASSWORD = 'pipeline2024';
   function getPassword() { return localStorage.getItem('dashPassword') || DEFAULT_PASSWORD; }
 
@@ -372,7 +357,6 @@
     if (countdownTimer) clearInterval(countdownTimer);
   }
 
-  // Stay logged in across page refreshes
   if (sessionStorage.getItem('authed') === '1') {
     document.getElementById('login-screen').style.display = 'none';
     document.getElementById('dashboard').style.display = 'block';
@@ -384,7 +368,6 @@
     document.getElementById('pw-error').textContent = '';
   }
   function closePwModal() { document.getElementById('pw-modal').classList.remove('open'); }
-
   function changePassword() {
     const cur = document.getElementById('pw-current').value;
     const nw  = document.getElementById('pw-new').value;
@@ -399,38 +382,38 @@
   }
 
   // ─── PIPELINES ────────────────────────────────────────────────────────────
+  // url: null = link not yet provided (shows as "pending")
   const PIPELINES = [
-    { id: 'sabine',    name: 'Sabine Hub',    url: 'https://www.sabinepipe.com/infoPosts' },
-    { id: 'tgp',       name: 'TGP',           url: 'https://ebb.tenn.com/ebb/informational-postings' },
-    { id: 'tgp-z0',    name: 'TGP Z0',        url: 'https://ebb.tenn.com/ebb/informational-postings' },
-    { id: 'tgp-100l',  name: 'TGP 100L',      url: 'https://ebb.tenn.com/ebb/informational-postings' },
-    { id: 'tgp-800l',  name: 'TGP 800L',      url: 'https://ebb.tenn.com/ebb/informational-postings' },
-    { id: 'tgp-500l',  name: 'TGP 500L',      url: 'https://ebb.tenn.com/ebb/informational-postings' },
-    { id: 'sonat',     name: 'Sonat',         url: 'https://ebb.sonat.com/ebb/informational-postings' },
-    { id: 'txgas',     name: 'Texas Gas',     url: 'https://ebb.txgas.com/informational-postings' },
-    { id: 'colgulf',   name: 'Columbia Gulf', url: 'https://ebb.columbiagulf.com/informational-postings' },
-    { id: 'tiger',     name: 'Tiger',         url: 'https://www.tigerpipeline.com/infoPosts' },
-    { id: 'ngpl',      name: 'NGPL',          url: 'https://gas.nicor.com/ebb/informational-postings' },
-    { id: 'rex',       name: 'REX',           url: 'https://www.rexpipeline.com/info-posts/' },
-    { id: 'rover',     name: 'Rover',         url: 'https://www.roverpipeline.com/informational-postings' },
-    { id: 'tetco',     name: 'TETCO',         url: 'https://ebb.tetco.com/ebb/informational-postings' },
-    { id: 'stx',       name: 'STX',           url: 'https://ebb.tetco.com/ebb/informational-postings' },
-    { id: 'wla',       name: 'WLA/ELA',       url: 'https://ebb.tetco.com/ebb/informational-postings' },
-    { id: 'anr',       name: 'ANR',           url: 'https://ebb.anr.com/ebb/informational-postings' },
-    { id: 'ml2se',     name: 'ML2-SE',        url: 'https://ebb.anr.com/ebb/informational-postings' },
-    { id: 'anr-se',    name: 'SE (ANR)',       url: 'https://ebb.anr.com/ebb/informational-postings' },
-    { id: 'egt',       name: 'EGT',           url: 'https://ebb.egt.com/informational-postings' },
-    { id: 'transco',   name: 'Transco',       url: 'https://ebb.williams.com/ebb/informational-postings' },
-    { id: 'bridge',    name: 'Bridgeline',    url: 'https://www.bridgelineholdings.com/infoPosts' },
-    { id: 'mep',       name: 'MEP',           url: 'https://www.midcontinentexpress.com/infoPosts' },
-    { id: 'fgt',       name: 'FGT',           url: 'https://ebb.fgt.com/ebb/informational-postings' },
-    { id: 'regency',   name: 'Regency',       url: 'https://www.regencygas.com/infoPosts' },
-    { id: 'gulfrun',   name: 'Gulf Run',      url: 'https://www.gulfrunpipeline.com/informational-postings' },
-    { id: 'gulfsouth', name: 'Gulf South',    url: 'https://ebb.gulfsouth.com/ebb/informational-postings' },
+    { id: 'sabine',    name: 'Sabine Hub',    url: null },
+    { id: 'tgp',       name: 'TGP',           url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=TGP' },
+    { id: 'tgp-z0',    name: 'TGP Z0',        url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=TGP' },
+    { id: 'tgp-100l',  name: 'TGP 100L',      url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=TGP' },
+    { id: 'tgp-800l',  name: 'TGP 800L',      url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=TGP' },
+    { id: 'tgp-500l',  name: 'TGP 500L',      url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=TGP' },
+    { id: 'sonat',     name: 'Sonat',         url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=SNG' },
+    { id: 'txgas',     name: 'Texas Gas',     url: 'https://www.gasquest.com/notices/critical' },
+    { id: 'colgulf',   name: 'Columbia Gulf', url: 'https://ebb.tceconnects.com/infopost/' },
+    { id: 'tiger',     name: 'Tiger',         url: null },
+    { id: 'ngpl',      name: 'NGPL',          url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=NGPL' },
+    { id: 'rex',       name: 'REX',           url: 'https://pipeline.tallgrassenergylp.com/Pages/Notices.aspx?pipeline=501&type=CRIT' },
+    { id: 'rover',     name: 'Rover',         url: 'https://rovermessenger.energytransfer.com/ipost/notice/critical?asset=ROVER' },
+    { id: 'tetco',     name: 'TETCO',         url: 'https://infopost.enbridge.com/infopost/TEHome.asp?Pipe=TE' },
+    { id: 'stx',       name: 'STX',           url: null },
+    { id: 'wla',       name: 'WLA/ELA',       url: null },
+    { id: 'anr',       name: 'ANR',           url: 'https://ebb.tceconnects.com/infopost/' },
+    { id: 'ml2se',     name: 'ML2-SE',        url: null },
+    { id: 'anr-se',    name: 'SE (ANR)',       url: null },
+    { id: 'egt',       name: 'EGT',           url: 'https://pipelines.energytransfer.com/ipost/notice/enbl-critical?asset=EGT' },
+    { id: 'transco',   name: 'Transco',       url: 'https://www.1line.williams.com/Transco/index.html' },
+    { id: 'bridge',    name: 'Bridgeline',    url: null },
+    { id: 'mep',       name: 'MEP',           url: 'https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=MEP' },
+    { id: 'fgt',       name: 'FGT',           url: 'https://pipelines.energytransfer.com/ipost/notice/critical?asset=FGT' },
+    { id: 'regency',   name: 'Regency',       url: null },
+    { id: 'gulfrun',   name: 'Gulf Run',      url: null },
+    { id: 'gulfsouth', name: 'Gulf South',    url: 'https://www.gasquest.com/notices/critical' },
   ];
 
-  // ─── SIMULATED DATA ───────────────────────────────────────────────────────
-  // Replace simulateFetch() with real API calls once backend is ready
+  // ─── SIMULATED DATA (replace with real API when backend is ready) ─────────
   const TITLES = [
     'OFO Declared – Operational Flow Order',
     'System Advisory – High Linepack',
@@ -438,18 +421,16 @@
     'Force Majeure – Compressor Station Outage',
     'Scheduling Flexibility Notice',
     'Critical Period Declaration',
-    'Swing Service Suspension',
     'Operational Notice – Planned Maintenance',
   ];
   const SUMMARIES = [
     'Effective gas day beginning 0900 CT. All shippers required to balance nominations within tolerance. Penalties apply for imbalances exceeding 5% of ADQ.',
     'Linepack above operational limits. Shippers requested to reduce injections and increase withdrawals until further notice.',
-    'Compression capacity reduced at Station 47 due to scheduled maintenance. Expect 15% throughput reduction through the affected segment.',
+    'Compression capacity reduced at Station 47 due to scheduled maintenance. Expect 15% throughput reduction.',
     'Force majeure declared at Compressor Station 12. All affected nominations subject to pro-rata curtailment.',
     'Enhanced scheduling flexibility available for the current gas day. Contact scheduling desk for details.',
     'Critical period in effect. Priority nominations only. Non-critical flow curtailment until system normalizes.',
   ];
-
   function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
   function hoursAgo(max) {
     const d = new Date();
@@ -461,9 +442,10 @@
     return d.toLocaleDateString('en-US',{month:'short',day:'numeric'}) + ' ' +
            d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
   }
-  function simulateFetch() {
+  function simulateFetch(pipeline) {
+    if (!pipeline.url) return { status: 'pending', posting: null };
     const r = Math.random();
-    if (r < 0.15) return { status:'none', posting:null };
+    if (r < 0.15) return { status: 'none', posting: null };
     const isNew = r > 0.75;
     const postedAt = hoursAgo(isNew ? 3 : 48);
     return { status: isNew ? 'new' : 'active', posting: {
@@ -474,7 +456,8 @@
 
   // ─── STATE ────────────────────────────────────────────────────────────────
   let pipelineData = {};
-  let currentFilter = 'all';
+  let statusFilter = 'all';
+  let selectedPipelines = new Set(); // empty = show all
   let searchQuery = '';
   let countdownSeconds = 15 * 60;
   let countdownTimer = null;
@@ -486,25 +469,68 @@
       document.getElementById('email-status').textContent = '✓ Saved';
       document.getElementById('email-status').style.color = '#1a5c38';
     }
-    PIPELINES.forEach(p => { pipelineData[p.id] = { status:'loading' }; });
+    buildPills();
+    PIPELINES.forEach(p => { pipelineData[p.id] = { status: 'loading' }; });
     renderGrid();
     refreshAll();
   }
 
   if (sessionStorage.getItem('authed') === '1') init();
 
+  // ─── PIPELINE PILLS ───────────────────────────────────────────────────────
+  function buildPills() {
+    const container = document.getElementById('pipeline-pills');
+    container.innerHTML = '';
+
+    // Clear button
+    const clearBtn = document.createElement('button');
+    clearBtn.className = 'clear-pill';
+    clearBtn.textContent = '✕ Clear';
+    clearBtn.onclick = () => { selectedPipelines.clear(); updatePills(); renderGrid(); };
+    container.appendChild(clearBtn);
+
+    PIPELINES.forEach(p => {
+      const pill = document.createElement('button');
+      pill.className = 'pipeline-pill';
+      pill.textContent = p.name;
+      pill.dataset.id = p.id;
+      pill.onclick = () => togglePipeline(p.id);
+      container.appendChild(pill);
+    });
+  }
+
+  function togglePipeline(id) {
+    if (selectedPipelines.has(id)) {
+      selectedPipelines.delete(id);
+    } else {
+      selectedPipelines.add(id);
+    }
+    updatePills();
+    renderGrid();
+  }
+
+  function updatePills() {
+    document.querySelectorAll('.pipeline-pill').forEach(pill => {
+      if (selectedPipelines.has(pill.dataset.id)) {
+        pill.classList.add('active');
+      } else {
+        pill.classList.remove('active');
+      }
+    });
+  }
+
   // ─── REFRESH ──────────────────────────────────────────────────────────────
   function refreshAll() {
     const btn = document.getElementById('refresh-btn');
     btn.textContent = '↻ Refreshing...'; btn.style.opacity = '0.5';
     const prev = { ...pipelineData };
-    PIPELINES.forEach(p => { pipelineData[p.id] = simulateFetch(); });
+    PIPELINES.forEach(p => { pipelineData[p.id] = simulateFetch(p); });
     const newOnes = PIPELINES.filter(p => {
       const c = pipelineData[p.id], v = prev[p.id];
       return c.status === 'new' && (!v || v.status !== 'new');
     });
     if (newOnes.length > 0 && alertEmail) {
-      showToast(`📧 New posting alert: ${newOnes.map(p => p.name).join(', ')}`);
+      showToast(`📧 New posting: ${newOnes.map(p => p.name).join(', ')}`);
     }
     renderGrid();
     document.getElementById('last-refresh-time').textContent = new Date().toLocaleTimeString();
@@ -528,26 +554,44 @@
   function renderGrid() {
     const grid = document.getElementById('pipeline-grid');
     grid.innerHTML = '';
+
     const visible = PIPELINES.filter(p => {
       const d = pipelineData[p.id];
-      const mf = currentFilter==='all' ||
-        (currentFilter==='new'    && d?.status==='new') ||
-        (currentFilter==='active' && d?.status==='active') ||
-        (currentFilter==='none'   && d?.status==='none');
-      return mf && p.name.toLowerCase().includes(searchQuery.toLowerCase());
+
+      // Pipeline selector filter
+      if (selectedPipelines.size > 0 && !selectedPipelines.has(p.id)) return false;
+
+      // Status filter (don't apply to pending)
+      if (d?.status !== 'pending') {
+        const mf = statusFilter === 'all' ||
+          (statusFilter === 'new'    && d?.status === 'new') ||
+          (statusFilter === 'active' && d?.status === 'active') ||
+          (statusFilter === 'none'   && d?.status === 'none');
+        if (!mf) return false;
+      }
+
+      // Search
+      return p.name.toLowerCase().includes(searchQuery.toLowerCase());
     });
+
     document.getElementById('pipeline-count').textContent = visible.length;
+
     visible.forEach(p => {
-      const d = pipelineData[p.id] || { status:'loading' };
-      let cc='pipeline-card', bc='pipeline-badge', bt='';
-      if      (d.status==='new')     { cc+=' has-new';     bc+=' badge-new';     bt='● New'; }
-      else if (d.status==='active')  { cc+=' has-posting'; bc+=' badge-active';  bt='Active'; }
-      else if (d.status==='none')    { cc+=' no-posting';  bc+=' badge-none';    bt='No Posting'; }
-      else                           {                      bc+=' badge-loading'; bt='Loading...'; }
+      const d = pipelineData[p.id] || { status: 'loading' };
+      let cc = 'pipeline-card', bc = 'pipeline-badge', bt = '';
+
+      if      (d.status === 'new')     { cc += ' has-new';     bc += ' badge-new';     bt = '● New'; }
+      else if (d.status === 'active')  { cc += ' has-posting'; bc += ' badge-active';  bt = 'Active'; }
+      else if (d.status === 'none')    { cc += ' no-posting';  bc += ' badge-none';    bt = 'No Posting'; }
+      else if (d.status === 'pending') { cc += ' is-pending';  bc += ' badge-pending'; bt = 'Link Pending'; }
+      else                             {                         bc += ' badge-loading'; bt = 'Loading...'; }
+
       let body = '';
-      if (d.status==='loading') {
+      if (d.status === 'loading') {
         body = `<div class="no-posting-msg">Fetching...</div>`;
-      } else if (d.status==='none') {
+      } else if (d.status === 'pending') {
+        body = `<div class="pending-msg">EBB link not yet configured for this pipeline.</div>`;
+      } else if (d.status === 'none') {
         body = `<div class="no-posting-msg">No active informational postings at this time.</div>`;
       } else {
         const post = d.posting;
@@ -560,6 +604,7 @@
           <div class="posting-summary">${post.summary}</div>
           <a class="view-link" href="${p.url}" target="_blank" rel="noopener">→ View Full Posting</a>`;
       }
+
       const card = document.createElement('div');
       card.className = cc;
       card.innerHTML = `
@@ -572,18 +617,20 @@
     });
   }
 
-  function setFilter(f,btn) {
-    currentFilter = f;
+  // ─── FILTERS ──────────────────────────────────────────────────────────────
+  function setStatusFilter(f, btn) {
+    statusFilter = f;
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     renderGrid();
   }
   function filterSearch(q) { searchQuery = q; renderGrid(); }
 
+  // ─── EMAIL ────────────────────────────────────────────────────────────────
   function saveEmail() {
     const val = document.getElementById('email-input').value.trim();
     const status = document.getElementById('email-status');
-    if (!val || !val.includes('@')) { status.textContent='✗ Invalid email'; status.style.color='#8a1a1a'; return; }
+    if (!val || !val.includes('@')) { status.textContent = '✗ Invalid email'; status.style.color = '#8a1a1a'; return; }
     alertEmail = val;
     localStorage.setItem('alertEmail', val);
     status.textContent = '✓ Saved'; status.style.color = '#1a5c38';
@@ -598,3 +645,4 @@
 </script>
 </body>
 </html>
+
