@@ -399,45 +399,58 @@
     { id: 'gulfsouth', name: 'Gulf South',    url: 'https://www.gasquest.com/notices/critical' },
   ];
 
-  // ─── SIMULATED DATA (replace with real API when backend is ready) ─────────
-  const TITLES = [
-    'OFO Declared – Operational Flow Order',
-    'System Advisory – High Linepack',
-    'Capacity Reduction Notice – Maintenance',
-    'Force Majeure – Compressor Station Outage',
-    'Scheduling Flexibility Notice',
-    'Critical Period Declaration',
-    'Operational Notice – Planned Maintenance',
-  ];
-  const SUMMARIES = [
-    'Effective gas day beginning 0900 CT. All shippers required to balance nominations within tolerance. Penalties apply for imbalances exceeding 5% of ADQ.',
-    'Linepack above operational limits. Shippers requested to reduce injections and increase withdrawals until further notice.',
-    'Compression capacity reduced at Station 47 due to scheduled maintenance. Expect 15% throughput reduction.',
-    'Force majeure declared at Compressor Station 12. All affected nominations subject to pro-rata curtailment.',
-    'Enhanced scheduling flexibility available for the current gas day. Contact scheduling desk for details.',
-    'Critical period in effect. Priority nominations only. Non-critical flow curtailment until system normalizes.',
-  ];
-  function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
-  function hoursAgo(max) {
-    const d = new Date();
-    d.setHours(d.getHours() - Math.floor(Math.random() * max));
-    d.setMinutes(d.getMinutes() - Math.floor(Math.random() * 60));
-    return d;
-  }
-  function fmt(d) {
+  function fmt(dateStr) {
+    if (!dateStr) return '—';
+    const d = new Date(dateStr);
+    if (isNaN(d)) return dateStr; // if it's already a formatted string, return as-is
     return d.toLocaleDateString('en-US',{month:'short',day:'numeric'}) + ' ' +
            d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
   }
-  function simulateFetch(pipeline) {
-    if (!pipeline.url) return { status: 'pending', posting: null };
-    const r = Math.random();
-    if (r < 0.15) return { status: 'none', posting: null };
-    const isNew = r > 0.75;
-    const postedAt = hoursAgo(isNew ? 3 : 48);
-    return { status: isNew ? 'new' : 'active', posting: {
-      title: pick(TITLES), summary: pick(SUMMARIES), postedAt,
-      effectiveDate: new Date(postedAt.getTime() + 3600000)
-    }};
+
+  // ─── FETCH REAL DATA FROM data.json ───────────────────────────────────────
+  async function fetchLiveData() {
+    try {
+      // Cache-bust so we always get the latest version
+      const res = await fetch('data.json?v=' + Date.now());
+      if (!res.ok) throw new Error('data.json not found');
+      const json = await res.json();
+
+      // Map data.json results onto pipelineData
+      PIPELINES.forEach(p => {
+        const d = json.pipelines?.[p.id];
+        if (!d) { pipelineData[p.id] = { status: 'none', posting: null }; return; }
+
+        // Determine if posting is "new" (posted within last 3 hours)
+        let status = d.status;
+        if (status === 'active' && d.posting?.date) {
+          const posted = new Date(d.posting.date);
+          const hoursAgo = (Date.now() - posted.getTime()) / 3600000;
+          if (hoursAgo < 3) status = 'new';
+        }
+
+        pipelineData[p.id] = {
+          status,
+          posting: d.posting ? {
+            title:         d.posting.title   || 'Informational Posting',
+            summary:       d.posting.summary || 'See full posting for details.',
+            postedAt:      d.posting.date    || '',
+            effectiveDate: d.posting.date    || '',
+            url:           d.posting.url     || p.url,
+          } : null
+        };
+      });
+
+      // Update last updated time from data.json
+      if (json.last_updated) {
+        document.getElementById('last-refresh-time').textContent =
+          new Date(json.last_updated).toLocaleTimeString();
+      }
+
+    } catch (e) {
+      console.warn('Could not load data.json:', e);
+      // Fall back: mark everything as error
+      PIPELINES.forEach(p => { pipelineData[p.id] = { status: 'error', posting: null }; });
+    }
   }
 
   // ─── STATE ────────────────────────────────────────────────────────────────
@@ -506,11 +519,11 @@
   }
 
   // ─── REFRESH ──────────────────────────────────────────────────────────────
-  function refreshAll() {
+  async function refreshAll() {
     const btn = document.getElementById('refresh-btn');
     btn.textContent = '↻ Refreshing...'; btn.style.opacity = '0.5';
     const prev = { ...pipelineData };
-    PIPELINES.forEach(p => { pipelineData[p.id] = simulateFetch(p); });
+    await fetchLiveData();
     const newOnes = PIPELINES.filter(p => {
       const c = pipelineData[p.id], v = prev[p.id];
       return c.status === 'new' && (!v || v.status !== 'new');
@@ -519,7 +532,6 @@
       showToast(`📧 New posting: ${newOnes.map(p => p.name).join(', ')}`);
     }
     renderGrid();
-    document.getElementById('last-refresh-time').textContent = new Date().toLocaleTimeString();
     resetCountdown();
     btn.textContent = '↻ Refresh'; btn.style.opacity = '1';
   }
@@ -585,10 +597,9 @@
           <div class="posting-title">${post.title}</div>
           <div class="posting-meta">
             <span>Posted: ${fmt(post.postedAt)}</span>
-            <span>Effective: ${fmt(post.effectiveDate)}</span>
           </div>
           <div class="posting-summary">${post.summary}</div>
-          <a class="view-link" href="${p.url}" target="_blank" rel="noopener">→ View Full Posting</a>`;
+          <a class="view-link" href="${post.url || p.url}" target="_blank" rel="noopener">→ View Full Posting</a>`;
       }
 
       const card = document.createElement('div');
