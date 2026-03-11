@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-11T20:54:57.876013+00:00",
+  "last_updated": "2026-03-11T21:22:54.634596+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -92,13 +92,8 @@
       "url": "https://rovermessenger.energytransfer.com/ipost/notice/critical?asset=ROVER"
     },
     "egt": {
-      "status": "active",
-      "posting": {
-        "title": "View Report",
-        "date": "Maintenance",
-        "summary": "Wed Mar 11 15:43:00 CDT 2026",
-        "url": "/ipost/base/popup-report/3543?asset=EGT&title=Critical+Notices"
-      },
+      "status": "error",
+      "posting": null,
       "name": "EGT",
       "url": "https://pipelines.energytransfer.com/ipost/notice/enbl-critical?asset=EGT"
     },
@@ -120,7 +115,7 @@
       "url": "https://infopost.enbridge.com/infopost/TEHome.asp?Pipe=TE"
     },
     "transco": {
-      "status": "error",
+      "status": "none",
       "posting": null,
       "name": "Transco",
       "url": "https://www.1line.williams.com/Transco/index.html"
