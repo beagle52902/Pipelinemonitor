@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-12T20:32:34.795369+00:00",
+  "last_updated": "2026-03-12T21:03:59.936273+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -58,13 +58,13 @@
       "url": "https://www.gasquest.com/notices/critical"
     },
     "colgulf": {
-      "status": "error",
+      "status": "none",
       "posting": null,
       "name": "Columbia Gulf",
       "url": "https://ebb.tceconnects.com/infopost/"
     },
     "anr": {
-      "status": "error",
+      "status": "none",
       "posting": null,
       "name": "ANR",
       "url": "https://ebb.tceconnects.com/infopost/"
@@ -92,8 +92,13 @@
       "url": "https://rovermessenger.energytransfer.com/ipost/notice/critical?asset=ROVER"
     },
     "egt": {
-      "status": "error",
-      "posting": null,
+      "status": "active",
+      "posting": {
+        "title": "View Report",
+        "date": "Maintenance",
+        "summary": "Wed Mar 11 15:43:00 CDT 2026",
+        "url": "/ipost/base/popup-report/3543?asset=EGT&title=Critical+Notices"
+      },
       "name": "EGT",
       "url": "https://pipelines.energytransfer.com/ipost/notice/enbl-critical?asset=EGT"
     },
