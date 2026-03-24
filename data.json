@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-24T23:22:01.450868+00:00",
+  "last_updated": "2026-03-24T23:51:50.333892+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -92,7 +92,7 @@
       "url": "https://rovermessenger.energytransfer.com/ipost/notice/critical?asset=ROVER"
     },
     "egt": {
-      "status": "none",
+      "status": "error",
       "posting": null,
       "name": "EGT",
       "url": "https://pipelines.energytransfer.com/ipost/notice/enbl-critical?asset=EGT"
