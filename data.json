@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-08T14:29:21.834492+00:00",
+  "last_updated": "2026-04-08T15:56:25.167393+00:00",
   "pipelines": {
     "tgp": {
       "status": "error",
@@ -72,8 +72,13 @@
       "url": "https://rovermessenger.energytransfer.com/ipost/notice/critical?asset=ROVER"
     },
     "egt": {
-      "status": "error",
-      "posting": null,
+      "status": "active",
+      "posting": {
+        "title": "View Report",
+        "date": "Maintenance",
+        "summary": "Tue Apr 07 15:24:00 CDT 2026",
+        "url": "/ipost/base/popup-report/3571?asset=EGT&title=Critical+Notices"
+      },
       "name": "EGT",
       "url": "https://pipelines.energytransfer.com/ipost/notice/enbl-critical?asset=EGT"
     },
