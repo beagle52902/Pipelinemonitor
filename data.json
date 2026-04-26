@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-26T14:36:00.411938+00:00",
+  "last_updated": "2026-04-26T15:26:51.844546+00:00",
   "pipelines": {
     "tgp": {
       "status": "error",
@@ -8,24 +8,14 @@
       "url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=TGP"
     },
     "sonat": {
-      "status": "active",
-      "posting": {
-        "title": "Informational Postings Capacity Operationally Available Point CapacitySegment CapacityStorage Capacity Unsubscribed Point CapacitySegment CapacityStorage Capacity No-Notice Activity Gas Electric CoordinationGas Quality Tariff ReferenceRepresentative Mainline PointsGas Quality Standards Index of CustomersLocationsNotices CriticalNon-CriticalPlanned Service OutageRequest to Purchase Releasable CapacityWaste HeatCapacity Release Indices Posted ImbalancesRegulatoryStandards of Conduct Affiliate Names & AddressesAffiliate Tariff WaiversChief Compliance OfficerEmployee TransfersImplementation ProceduresInformation DisclosureJob Titles & DescriptionsPotential MergersShared FacilitiesVoluntary Consent Tariff Title Sheet/SectionTable Of ContentsPreliminary StatementMap Tariff ReferenceSystem MapZone 0Zone 1Zone 2Zone 3 Currently Effective RatesRate SchedulesGeneral Terms and ConditionsForm Of Service AgreementEntire TariffSheet/Section Index Transactional Reporting FirmInterruptibleCapacity Release Info LookupOther Type 3 OFO Probability DownloadsSearch Entire TariffRate SchedulesGeneral Terms and ConditionsForm of Service Agreement Customer Activities DART Login Site MapBear Creek Info Postings",
-        "date": "",
-        "summary": "CRITICAL NOTICES EXCEL-Summary (All) DOCX-Summary (All) PDF-Summary (All) PDF-Detail TEXT-Detail TSP Name:SOUTHERN NATURAL GAS CO.TSP:6900518 Post Date: (Notices 90 days prior to this date will be displayed) Subject Search: Notice Type Desc (1): SELECT ALLAFFECTING CAP.BUMPCAP. CONSTRAINTCAP. DISCOU",
-        "url": "https://pipeline2.kindermorgan.com#"
-      },
+      "status": "error",
+      "posting": null,
       "name": "Sonat",
       "url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=SNG"
     },
     "ngpl": {
-      "status": "active",
-      "posting": {
-        "title": "Informational Postings Capacity Operationally Available Point CapacitySegment CapacityStorage Capacity Unsubscribed Point CapacitySegment CapacityStorage Capacity Capacity Allocation LogNo-Notice ActivityDSSNSS Gas Electric CoordinationGas Quality Tariff ReferenceRepresentative Mainline PointsGas Quality StandardsHydrocarbon Dewpoint Posted LimitsHDP Receipt Points Index of CustomersLocationsNotices CriticalNon-CriticalPlanned Service OutageRequest to Purchase Releasable CapacityWaste HeatCapacity Release Indices Posted ImbalancesRegulatoryStandards of Conduct Affiliate Names & AddressesAffiliate Tariff WaiversChief Compliance OfficerEmployee TransfersImplementation ProceduresInformation DisclosureJob Titles & DescriptionsPotential MergersShared FacilitiesVoluntary Consent Tariff Title Sheet/SectionTable Of ContentsPreliminary StatementMap Tariff ReferenceSystem Map Currently Effective RatesRate SchedulesGeneral Terms and ConditionsForm Of Service AgreementEntire TariffSheet/Section Index Transactional Reporting FirmInterruptibleCapacity Release Info LookupDownloadsSearch Entire TariffRate SchedulesGeneral Terms and ConditionsForm of Service Agreement Customer Activities DART Login Site Map",
-        "date": "",
-        "summary": "CRITICAL NOTICES EXCEL-Summary (All) DOCX-Summary (All) PDF-Summary (All) PDF-Detail TEXT-Detail TSP Name:NATURAL GAS PIPELINE CO.TSP:6931794 Post Date: (Notices 90 days prior to this date will be displayed) Subject Search: Notice Type Desc (1): SELECT ALLAFFECTING CAP.BUMPCAP. CONSTRAINTCAP. DISCOU",
-        "url": "https://pipeline2.kindermorgan.com#"
-      },
+      "status": "error",
+      "posting": null,
       "name": "NGPL",
       "url": "https://pipeline2.kindermorgan.com/Notices/Notices.aspx?type=C&code=NGPL"
     },
