@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-01T14:13:09.987386+00:00",
+  "last_updated": "2026-05-01T15:15:11.481945+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -96,8 +96,8 @@
       "posting": {
         "title": "View Report",
         "date": "Maintenance",
-        "summary": "Fri May 01 08:09:00 CDT 2026",
-        "url": "/ipost/base/popup-report/3597?asset=EGT&title=Critical+Notices"
+        "summary": "Fri May 01 09:54:00 CDT 2026",
+        "url": "/ipost/base/popup-report/3598?asset=EGT&title=Critical+Notices"
       },
       "name": "EGT",
       "url": "https://pipelines.energytransfer.com/ipost/notice/enbl-critical?asset=EGT"
