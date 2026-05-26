@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-26T01:28:17.705596+00:00",
+  "last_updated": "2026-05-26T05:36:57.432825+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -114,7 +114,7 @@
       "url": "https://pipelines.energytransfer.com/ipost/notice/critical?asset=FGT"
     },
     "tetco": {
-      "status": "none",
+      "status": "error",
       "posting": null,
       "name": "TETCO",
       "url": "https://infopost.enbridge.com/infopost/TEHome.asp?Pipe=TE"
