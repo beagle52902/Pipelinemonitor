@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-11T20:33:08.432947+00:00",
+  "last_updated": "2026-06-11T22:25:54.456047+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -120,7 +120,7 @@
       "url": "https://infopost.enbridge.com/infopost/TEHome.asp?Pipe=TE"
     },
     "transco": {
-      "status": "error",
+      "status": "none",
       "posting": null,
       "name": "Transco",
       "url": "https://www.1line.williams.com/Transco/index.html"
