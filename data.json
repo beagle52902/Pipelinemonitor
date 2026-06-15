@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-15T11:25:48.257885+00:00",
+  "last_updated": "2026-06-15T16:23:36.428440+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -84,9 +84,9 @@
       "status": "active",
       "posting": {
         "title": "Maint",
-        "date": "2026-05-14 07:55:00.0",
-        "summary": "2026-05-14 07:55:00.0",
-        "url": "/ipost/notice/show/63667?asset=ROVER"
+        "date": "2026-06-15 10:50:00.0",
+        "summary": "2026-06-15 10:50:00.0",
+        "url": "/ipost/notice/show/64889?asset=ROVER"
       },
       "name": "Rover",
       "url": "https://rovermessenger.energytransfer.com/ipost/notice/critical?asset=ROVER"
@@ -105,10 +105,10 @@
     "fgt": {
       "status": "active",
       "posting": {
-        "title": "Other",
-        "date": "Feb 20 2026 10:40 AM",
-        "summary": "Feb 20 2026 10:40 AM",
-        "url": "/ipost/notice/show/61726?asset=FGT"
+        "title": "Operational Alert",
+        "date": "Jun 15 2026 6:37 AM",
+        "summary": "Jun 15 2026 9:00 AM",
+        "url": "/ipost/notice/show/64876?asset=FGT"
       },
       "name": "FGT",
       "url": "https://pipelines.energytransfer.com/ipost/notice/critical?asset=FGT"
