@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29T11:30:15.189779+00:00",
+  "last_updated": "2026-06-29T15:02:35.645680+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -105,10 +105,10 @@
     "fgt": {
       "status": "active",
       "posting": {
-        "title": "Other",
-        "date": "Feb 20 2026 10:40 AM",
-        "summary": "Feb 20 2026 10:40 AM",
-        "url": "/ipost/notice/show/61726?asset=FGT"
+        "title": "Operational Alert",
+        "date": "Jun 29 2026 6:36 AM",
+        "summary": "Jun 29 2026 9:00 AM",
+        "url": "/ipost/notice/show/65552?asset=FGT"
       },
       "name": "FGT",
       "url": "https://pipelines.energytransfer.com/ipost/notice/critical?asset=FGT"
@@ -120,7 +120,7 @@
       "url": "https://infopost.enbridge.com/infopost/TEHome.asp?Pipe=TE"
     },
     "transco": {
-      "status": "none",
+      "status": "error",
       "posting": null,
       "name": "Transco",
       "url": "https://www.1line.williams.com/Transco/index.html"
