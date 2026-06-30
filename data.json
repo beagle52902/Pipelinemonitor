@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30T08:54:53.308429+00:00",
+  "last_updated": "2026-06-30T11:38:15.510969+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -106,9 +106,9 @@
       "status": "active",
       "posting": {
         "title": "Operational Alert",
-        "date": "Jun 29 2026 6:36 AM",
-        "summary": "Jun 29 2026 9:00 AM",
-        "url": "/ipost/notice/show/65552?asset=FGT"
+        "date": "Jun 30 2026 6:31 AM",
+        "summary": "Jun 30 2026 9:00 AM",
+        "url": "/ipost/notice/show/65605?asset=FGT"
       },
       "name": "FGT",
       "url": "https://pipelines.energytransfer.com/ipost/notice/critical?asset=FGT"
