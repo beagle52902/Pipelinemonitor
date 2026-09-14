@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-14T20:33:00.306605+00:00",
+  "last_updated": "2026-09-14T23:27:07.295067+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -81,8 +81,13 @@
       "url": "https://pipeline.tallgrassenergylp.com/Pages/Notices.aspx?pipeline=501&type=CRIT"
     },
     "rover": {
-      "status": "error",
-      "posting": null,
+      "status": "active",
+      "posting": {
+        "title": "Other",
+        "date": "2026-06-16 14:05:00.0",
+        "summary": "2026-06-16 14:05:00.0",
+        "url": "/ipost/notice/show/64962?asset=ROVER"
+      },
       "name": "Rover",
       "url": "https://rovermessenger.energytransfer.com/ipost/notice/critical?asset=ROVER"
     },
@@ -98,8 +103,13 @@
       "url": "https://pipelines.energytransfer.com/ipost/notice/enbl-critical?asset=EGT"
     },
     "fgt": {
-      "status": "error",
-      "posting": null,
+      "status": "active",
+      "posting": {
+        "title": "Operational Alert",
+        "date": "Sep 14 2026 6:47 AM",
+        "summary": "Sep 14 2026 9:00 AM",
+        "url": "/ipost/notice/show/68924?asset=FGT"
+      },
       "name": "FGT",
       "url": "https://pipelines.energytransfer.com/ipost/notice/critical?asset=FGT"
     },
