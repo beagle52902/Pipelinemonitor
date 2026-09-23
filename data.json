@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-23T14:26:24.601833+00:00",
+  "last_updated": "2026-09-23T18:29:13.471307+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -83,10 +83,10 @@
     "rover": {
       "status": "active",
       "posting": {
-        "title": "Other",
-        "date": "2026-06-16 14:05:00.0",
-        "summary": "2026-06-16 14:05:00.0",
-        "url": "/ipost/notice/show/64962?asset=ROVER"
+        "title": "Maintenance",
+        "date": "2026-09-23 08:30:00.0",
+        "summary": "2026-09-23 08:30:00.0",
+        "url": "/ipost/notice/show/72670?asset=ROVER"
       },
       "name": "Rover",
       "url": "https://rovermessenger.energytransfer.com/ipost/notice/critical?asset=ROVER"
@@ -105,10 +105,10 @@
     "fgt": {
       "status": "active",
       "posting": {
-        "title": "Operational Alert",
-        "date": "Sep 23 2026 6:46 AM",
-        "summary": "Sep 23 2026 9:00 AM",
-        "url": "/ipost/notice/show/72665?asset=FGT"
+        "title": "Planned Service Outage",
+        "date": "Sep 23 2026 11:48 AM",
+        "summary": "Oct 6 2026 9:00 AM",
+        "url": "/ipost/notice/show/72681?asset=FGT"
       },
       "name": "FGT",
       "url": "https://pipelines.energytransfer.com/ipost/notice/critical?asset=FGT"
