@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-30T21:15:20.649104+00:00",
+  "last_updated": "2026-10-01T00:38:30.421712+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -58,13 +58,13 @@
       "url": "https://www.gasquest.com/notices/critical"
     },
     "colgulf": {
-      "status": "error",
+      "status": "none",
       "posting": null,
       "name": "Columbia Gulf",
       "url": "https://ebb.tceconnects.com/infopost/"
     },
     "anr": {
-      "status": "error",
+      "status": "none",
       "posting": null,
       "name": "ANR",
       "url": "https://ebb.tceconnects.com/infopost/"
