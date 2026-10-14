@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-14T10:07:38.854328+00:00",
+  "last_updated": "2026-10-14T15:04:32.272579+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -84,9 +84,9 @@
       "status": "active",
       "posting": {
         "title": "Maintenance",
-        "date": "2026-10-02 10:00:00.0",
-        "summary": "2026-10-02 10:00:00.0",
-        "url": "/ipost/notice/show/73216?asset=ROVER"
+        "date": "2026-10-14 07:59:00.0",
+        "summary": "2026-10-14 07:59:00.0",
+        "url": "/ipost/notice/show/73899?asset=ROVER"
       },
       "name": "Rover",
       "url": "https://rovermessenger.energytransfer.com/ipost/notice/critical?asset=ROVER"
