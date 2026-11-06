@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-06T09:51:26.839328+00:00",
+  "last_updated": "2026-11-06T16:59:59.442311+00:00",
   "pipelines": {
     "tgp": {
       "status": "active",
@@ -64,7 +64,7 @@
       "url": "https://ebb.tceconnects.com/infopost/"
     },
     "anr": {
-      "status": "none",
+      "status": "error",
       "posting": null,
       "name": "ANR",
       "url": "https://ebb.tceconnects.com/infopost/"
@@ -95,9 +95,9 @@
       "status": "active",
       "posting": {
         "title": "View Report",
-        "date": "Maintenance",
-        "summary": "Thu Nov 05 15:48:00 CST 2026",
-        "url": "/ipost/base/popup-report/3814?asset=EGT&title=Critical+Notices"
+        "date": "Operational Alert",
+        "summary": "Fri Nov 06 07:46:00 CST 2026",
+        "url": "/ipost/base/popup-report/3815?asset=EGT&title=Critical+Notices"
       },
       "name": "EGT",
       "url": "https://pipelines.energytransfer.com/ipost/notice/enbl-critical?asset=EGT"
@@ -120,7 +120,7 @@
       "url": "https://infopost.enbridge.com/infopost/TEHome.asp?Pipe=TE"
     },
     "transco": {
-      "status": "error",
+      "status": "none",
       "posting": null,
       "name": "Transco",
       "url": "https://www.1line.williams.com/Transco/index.html"
